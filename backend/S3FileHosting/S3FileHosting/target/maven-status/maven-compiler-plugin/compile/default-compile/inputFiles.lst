@@ -1,0 +1,11 @@
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/repo/UserRepo.java
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/controller/HelloController.java
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/config/SpringSecurity.java
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/repo/RoleRepo.java
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/entity/User.java
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/service/UserService.java
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/entity/Role.java
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/config/CustomUserDetailsService.java
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/dto/UserDto.java
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/S3FileHostingApplication.java
+/home/kaustubh/Documents/S3/backend/S3FileHosting/S3FileHosting/src/main/java/com/example/S3FileHosting/controller/AuthController.java

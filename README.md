@@ -1,7 +1,17 @@
 # CloudStorageApp
 S3 file storage. UI access through a portal created in ReactJS. Handled in backend by Spring boot.
+To mimic the S3 file storage, have create a local python file server.
 
-Todo:
+
+## Flow:
+
+### Backend
+Spring Boot 
+
+
+
+
+
 
 Make detailed report of: 
 

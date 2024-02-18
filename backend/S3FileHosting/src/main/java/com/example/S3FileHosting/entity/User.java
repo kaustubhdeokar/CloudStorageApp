@@ -12,34 +12,41 @@ import java.util.List;
 @Setter
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor@Entity
-@Table(name="users")
+@AllArgsConstructor
+@Entity
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userid;
 
-    @Column(nullable=false)
+    @Column(nullable = false, unique = true)
+    private String username;
+
+    @Column(nullable = false)
     private String name;
 
-    @Column(nullable=false, unique=true)
+    @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String password;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
+    //cascade - user parent child roles,
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
-            name="users_roles",
-            joinColumns={@JoinColumn(name="user_id", referencedColumnName="userid")},
-            inverseJoinColumns={@JoinColumn(name="role_id", referencedColumnName="roleid")})
+            name = "users_roles",
+            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "userid")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "roleid")})
     private List<Role> roles = new ArrayList<>();
 
-    public User(String name, String email, String password, List<Role> roles) {
-        this.name = name;
+    public User(String username, String email, String name, String password, List<Role> roles) {
+        this.username = username;
         this.email = email;
+        this.name = name;
         this.password = password;
+
         this.roles = roles;
     }
 }

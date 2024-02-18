@@ -1,30 +1,38 @@
 package com.example.S3FileHosting.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.S3FileHosting.security.JwtAuthenticationEntryPoint;
+import com.example.S3FileHosting.security.JwtAuthenticationFilter;
+import com.example.S3FileHosting.service.UserDetailsServiceImpl;
+import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.ProviderManager;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.CorsConfigurer;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 @Configuration
 @EnableWebSecurity
+@AllArgsConstructor
 public class SpringSecurity {
 
-    @Autowired
-    private UserDetailsService userDetailsService;
+    private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
+    private UserDetailsServiceImpl userDetailsService;
 
+    private
     @Bean
-    public static PasswordEncoder passwordEncoder(){
+    static PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
@@ -33,8 +41,7 @@ public class SpringSecurity {
         return (corsConfigurer) -> {
             corsConfigurer.configurationSource(corsConfigurationSource());
             // You can further customize CORS settings if needed
-            // For example:
-            // corsConfigurer.allowedOrigins("http://localhost:3000");
+            // For example: corsConfigurer.allowedOrigins("http://localhost:3000");
             // corsConfigurer.allowedMethods("GET", "POST", "PUT", "DELETE");
         };
     }
@@ -58,20 +65,21 @@ public class SpringSecurity {
         http.cors(corsCustomizer()).
                 csrf().disable()
                 .authorizeHttpRequests((authorize) ->
-                        authorize.requestMatchers("/register/**").permitAll()
-                                .requestMatchers("/login/**").permitAll()
+                                authorize.requestMatchers("api/auth/**").permitAll()
                                 .requestMatchers("/file/**").permitAll()
-                                .requestMatchers("/index").permitAll()
                                 .requestMatchers("/users").hasRole("ADMIN")
                 );
+        http.exceptionHandling(exception -> exception.authenticationEntryPoint(jwtAuthenticationEntryPoint));
+        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .userDetailsService(userDetailsService)
-                .passwordEncoder(passwordEncoder());
+    @Bean
+    public AuthenticationManager authManager(UserDetailsServiceImpl detailsService) {
+        DaoAuthenticationProvider daoProvider = new DaoAuthenticationProvider();
+        daoProvider.setUserDetailsService(detailsService);
+        daoProvider.setPasswordEncoder(passwordEncoder());
+        return new ProviderManager(daoProvider);
     }
 
 }

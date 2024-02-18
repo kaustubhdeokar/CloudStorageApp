@@ -15,10 +15,10 @@ public class StorageConfig {
 
     @Bean
     public AmazonS3 s3Client() {
-        AWSCredentials credentials = new BasicAWSCredentials("<accessKey>", "<secretKey>");
+        AWSCredentials credentials = new BasicAWSCredentials("", "");
         return AmazonS3ClientBuilder.standard()
                 .withCredentials(new AWSStaticCredentialsProvider(credentials))
-                .withRegion("<region>").build();
+                .withRegion("").build();
     }
 
 

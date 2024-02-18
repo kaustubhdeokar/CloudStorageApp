@@ -29,3 +29,6 @@ Taking an example of application-1 on (domain A) and application-2 on (domain B)
 > How to communicate spring boot response to react. 
 
 > How to route between pages react.
+
+> fetch data and display it on a form.
+

@@ -1,0 +1,68 @@
+
+Experience
+
+Siemens Digital Industries Software
+Hyderabad, IN
+Associate Lead Software Engineer
+Jan 2023 - *
+– Security: Restrict Access to Designs. Required changes in way we fundamentally process design and any entity related to design.
+Modifying legacy code on affected entities to comply with authorization.
+Senior Software Engineer
+Jan 22–Dec 22
+– OAuth2: - Authorization support added for all supported suites (Total of 3). Used Keycloak to test the same.
+– Licensing: Implementing a centralized licensing approach for 3 suites and discontinuing prior fragmented licensing approaches.
+Software Engineer
+July 2020–Dec 2021
+– Data multiplication: Utility to replicate data used for scalability testing. 40 % Faster than older utility using multi threading.
+– Product Rebranding: - Core product renaming as per Siemens guidelines.
+Sub stories done to support full stack development. DB - Upgraders - backward compatibilty support, Object Model - Product
+naming, common ribbon changes, UI - JavaFX login screen.
+Intern
+Dec 2019–Jun 2020
+– Tagging: Support for custom taggers in search. Creating tags for objects with attributes defined from a Json file. Tags used for
+search, query through REST APIs.
+– A background task - periodically syncing GB’s of data between two databases.
+
+
+Skills
+Programming Languages Java, Python, C++, SQL
+Databases: PostgreSQL, Oracle, MongoDB. Build Tools: Gradle, Maven, Make.
+Framework: Spring Boot, JUnit, Mockito,
+Tools and Technologies: Postman, Git, Confluence, Jira, Docker
+
+
+Projects
+
+HRM Tool
+– Features include tracking user activities, location through Geo-location APIs, log timing, attendance through micro-service archi-
+tecture. Project Link
+Spring Boot, C++, MySql, Go Lang, React
+
+Blogging Site
+– A full stack blogging application with topic management, post creation, JWT based user authentication.
+Spring (Boot, Security, Data JPA, Web)
+Front end application in Angular Link
+
+
+Messaging App
+– Messaging application using Websockets. Supports Group messages, private messages. Uses SockJs for websocket implementation,
+Stomp protocol for messaging. Link
+Spring Boot, SockJs, Stomp protocol for messaging, UI - HTML/CSS/JQuery
+
+Education
+
+Vellore Institute of Technology, Vellore
+B.Tech, Computer Science and Engineering - 9.03/10
+TamilNadu, India
+2016–2020
+
+
+Accomplishments
+
+Paper presentation at Siemens Internal Technical Conference 2021: Developing Framework for Stress Testing the software.
+Hackerrank - 5* badges and certifications in Java, Problem Solving, Python and C++.Profile URL
+Certifications from MongoDB, IBM - Microservices. URL
+Certifications in REST API’s and SQL. URL
+Annual Scholarship of Rs 50,000 every year, VIT University, 2016-2020
+Recipient of this scholarship for scoring a rank less than 10,000 in VITEEE entrance exam and maintaining a minimum of 9 CGPA every
+semester.

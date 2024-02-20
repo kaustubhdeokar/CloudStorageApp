@@ -11,24 +11,17 @@ Taking an example of application-1 on (domain A) and application-2 on (domain B)
     cross-control-allow-method:method-name(post, delete)
 
 
-> To enable cors in the spring backend - added this piece of code.
-```
-  @Bean CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173/**", "http://localhost:5173/"));
-        configuration.setAllowedMethods(Arrays.asList("GET","POST"));
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
-    }
-
-```
-
 >  How to pass data from react to spring boot. 
+- create any object, containing fields which should be similar to the dto object expected
+  in the backend application. 
 
 > How to communicate spring boot response to react. 
+- to send a response with status is done in a regular way. The data to be use on the frontend side can be found in response.data.<> fields.
+
 
 > How to route between pages react.
+- Navigate library. Also use services to store session info and all, which can be used to put up conditionals. 
 
 > fetch data and display it on a form.
+- //todo:
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Login.css'
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { createContext, useContext } from 'react';
-import { loginUser } from '../services/AuthServices';
+import { loginUser, saveLoggedInUser, storeToken } from '../services/AuthServices';
 
 function Login() {
 
@@ -10,15 +10,24 @@ function Login() {
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
     const navigator = useNavigate();
-    
+
     let handleSubmit = async (e) => {
         e.preventDefault();
         const user = { emailOrUsername, password };
         console.log(user);
-        
+
 
         loginUser(user).then((response) => {
-            navigator("/main")
+            //convert string into base 64 text.
+            console.log('btoa:' + window.btoa(emailOrUsername + ":" + password));
+            //const token = 'Basic ' + window.btoa(emailOrUsername+":"+password); 
+            const jwtToken = 'Bearer ' + response.data.accessToken;
+            storeToken(jwtToken);
+
+            saveLoggedInUser(emailOrUsername);
+            navigator("/main");
+
+            window.location.reload(false);
         }).catch((error) => {
             console.error(error);
         });

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c27884e3-517a-4ac9-b0f1-a54aa464c926" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/config/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/config/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/config/SpringSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/config/SpringSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/config/StorageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/config/StorageConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/dto/LoginDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/exception/CustomerAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/exception/CustomerAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/repo/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/repo/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/service/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/src/main/java/com/example/S3FileHosting/service/StorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/S3FileHosting/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/S3FileHosting/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requests/file-upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requests/s3.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2cXH3yN8TGK4JPuRncQOpPTW98K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/home/kaustubh/Documents/github/CloudStorageApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c27884e3-517a-4ac9-b0f1-a54aa464c926" name="Changes" comment="" />
+      <created>1708250807094</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708250807094</updated>
+      <workItem from="1708250808355" duration="5000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
